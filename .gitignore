@@ -1,0 +1,33 @@
+# OpenFOAM runtime products
+**/processor*
+# Named OpenFOAM time directories are ignored explicitly during case use
+# without excluding repository directories such as 04_MRF_Steady.
+**/log.*
+**/logs/
+**/postProcessing/
+
+# OpenFOAM mesh artifacts
+**/constant/polyMesh/
+**/constant/cellToRegion
+**/constant/extendedFeatureEdgeMesh/
+**/*.eMesh
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Plot and editor products
+*.png
+*.pdf
+*.eps
+.idea/
+.vscode/
+*.swp
+*~
+
+# Keep selected published figures explicitly
+!images/*.png
+!images/*.pdf

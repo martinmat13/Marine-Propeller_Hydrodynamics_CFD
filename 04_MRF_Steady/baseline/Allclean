@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+case_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$case_dir"
+
+for time_dir in $(foamListTimes -case "$case_dir" -withZero 2>/dev/null); do
+    if [[ "$time_dir" != "0" ]]; then
+        rm -rf -- "$case_dir/$time_dir"
+    fi
+done
+
+for processor_dir in processor0 processor1 processor2 processor3 processor4 processor5 processor6 processor7 processor8 processor9 processor10 processor11 processor12 processor13 processor14 processor15; do
+    rm -rf -- "$case_dir/$processor_dir"
+done
+
+rm -rf -- "$case_dir/postProcessing"
+rm -rf -- "$case_dir/constant/polyMesh"
+rm -rf -- "$case_dir/constant/extendedFeatureEdgeMesh"

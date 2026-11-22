@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+case_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$case_dir"
+
+python3 ../../02_Geometry/generate_geometry.py
+mkdir -p constant/triSurface
+cp ../../02_Geometry/outputs/propeller_b5_75_reconstruction.stl constant/triSurface/propeller.stl
+
+blockMesh | tee log.blockMesh
+surfaceFeatureExtract -overwrite | tee log.surfaceFeatureExtract || true
+snappyHexMesh -overwrite | tee log.snappyHexMesh
+topoSet | tee log.topoSet
+checkMesh | tee log.checkMesh
+
+simpleFoam | tee log.simpleFoam
