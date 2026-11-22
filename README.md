@@ -5,10 +5,10 @@ hydrodynamic loading, and cavitation.
 
 ## Project status
 
-This repository is under active development. The current milestone establishes
-the project structure, local environment record, and marine propeller
-fundamentals. It does **not** yet contain a simulation, CFD result,
-experimental comparison, or authentic Wageningen propeller geometry.
+This repository is under active development. It contains a preliminary
+OpenFOAM case and a solver workflow test, but no converged, verified, or
+validated performance result. The current STL is a geometry-development proxy,
+not an authentic Wageningen blade surface.
 
 ## Project objective
 
@@ -83,8 +83,10 @@ Run `scripts/check_environment.sh` to check the available tools.
   dimensions must be identified for a specific configuration.
 - The Wageningen B-series performance polynomials are reference models, not
   substitutes for a geometrically faithful CFD model.
-- No geometry or experimental curve should be copied into this repository
-  unless its redistribution terms are confirmed.
+- The current generated B-series curve is a polynomial regression, not raw
+  experimental data.
+- The current surface is not physically complete enough for quantitative
+  propeller loading.
 - The MRF method represents time-averaged relative rotation. It is not a
   transient simulation of individual blade passages.
 

@@ -2,8 +2,8 @@
 
 ## Executive summary
 
-The repository is under development. No CFD result or validated coefficient
-prediction is available yet.
+The repository is under development. An early solver workflow test was run,
+but no converged or validated coefficient prediction is available.
 
 ## Configuration
 
@@ -28,7 +28,8 @@ experimental model-test data.
 
 ## Limitations
 
-- The blade STL is a parametric reconstruction.
+- The blade STL is a coarse open-sheet workflow proxy, not a closed full-section
+propeller geometry.
 - Rake and skew are omitted.
 - No mesh-independence study has been run.
 - No validation claim is made.

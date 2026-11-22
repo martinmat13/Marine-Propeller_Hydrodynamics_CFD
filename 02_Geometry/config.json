@@ -6,10 +6,11 @@
   "expanded_area_ratio": 0.750,
   "hub_diameter_ratio": 0.167,
   "reference_source": "Oosterveld and van Oossanen (1975), Table 5",
-  "geometry_status": "parametric reconstruction",
+  "geometry_status": "workflow proxy - not suitable for quantitative performance",
   "notes": [
-    "The surface is a CFD-ready reconstruction of the B5-75 dimensions.",
-    "It is not a facsimile of NSMB model-test blade coordinates.",
+    "The blade surface is a coarse open sheet, not a closed full-section blade solid.",
+    "The geometry is not a facsimile of NSMB model-test blade coordinates.",
+    "Do not use the generated surface to claim quantitative B5-75 performance.",
     "It must not be described as experimentally measured geometry.",
     "No B-series reference curve is treated as measured experimental data."
   ]

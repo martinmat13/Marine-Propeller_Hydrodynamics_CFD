@@ -28,6 +28,9 @@ Date: 2026-11-22
 - The force output at the last inspected state was approximately 213.7 N thrust
   and -5.05 N m moment about the shaft axis.
 - This is a work-in-progress test result, not a converged operating-point result.
+- After that test, the propeller velocity boundary condition was changed to
+  `noSlip`, matching the installed v2512 rotating-cylinder MRF tutorial. The
+  old force output does not test the current boundary-field setup.
 
 ## Outstanding issues
 
